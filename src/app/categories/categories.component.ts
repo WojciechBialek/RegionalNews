@@ -13,9 +13,9 @@ export class CategoriesComponent implements OnInit {
 
   buttonHandle(e){
     console.log(e);
-    this.httpService.getArticles().subscribe(articles => {
+    this.httpService.getArticles(e).subscribe(articles => {
       console.log(articles);
-    })
+    });
   }
   ngOnInit() {
   }
