@@ -8,11 +8,14 @@ import { HttpService } from '../services/http.service';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor(private httpservice: HttpService ) { }
+  constructor(private httpService: HttpService ) { }
   categories = ['business', 'entertainment', 'health', 'science', 'sports', 'technology'];
 
   buttonHandle(e){
     console.log(e);
+    this.httpService.getArticles().subscribe(articles => {
+      console.log(articles);
+    })
   }
   ngOnInit() {
   }

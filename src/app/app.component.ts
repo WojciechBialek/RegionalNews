@@ -8,3 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'RegionalNews';
 }
+
+export interface Article {
+  title: string;
+  description: string;
+  urlToImage: string;
+}
