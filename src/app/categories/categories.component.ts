@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-categories',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
-  categories = ['biznes', 'rozrywka', 'zdrowie', 'nauka', 'sport'];
+  constructor(private httpservice: HttpService ) { }
+  categories = ['business', 'entertainment', 'health', 'science', 'sports', 'technology'];
 
   buttonHandle(e){
     console.log(e);
