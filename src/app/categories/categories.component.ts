@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class CategoriesComponent implements OnInit {
 
   constructor() { }
+  categories = ['biznes', 'rozrywka', 'zdrowie', 'nauka', 'sport'];
 
+  buttonHandle(e){
+    console.log(e);
+  }
   ngOnInit() {
   }
 
