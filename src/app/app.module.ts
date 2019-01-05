@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { PageSizeComponent } from './page-size/page-size.component';
 import { ArticleComponent } from './article/article.component';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpService} from './services/http.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { ArticleComponent } from './article/article.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
