@@ -4,7 +4,7 @@
     {{title}}
   </h1>
   <app-categories (eventTask)="selected($event)"></app-categories>
-  <app-page-size></app-page-size>
+  <app-page-size (eventAmount)="selectedAmount($event)"></app-page-size>
 
       <app-article [tasks]='tasks'></app-article>
 

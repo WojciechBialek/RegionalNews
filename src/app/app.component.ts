@@ -12,6 +12,10 @@ export class AppComponent {
     this.tasks = data.articles;
     console.log(this.tasks);
   }
+  selectedAmount(data) {
+    this.tasks = data.articles;
+    console.log(this.tasks);
+  }
 
   constructor() {  }
 }
