@@ -1,10 +1,12 @@
-<div class="article">
+<div class="article" *ngFor="let task of tasks">
   <div>
-    <img src="#" class="articleImg">
+    <img src="{{task.urlToImage}}" class="article__img">
   </div>
   <div>
-    <h3>{{title}}</h3>
-    <p> {{description}}</p>
-    <a href="#">zrodlo</a><span>więcej</span>
+    <h3>{{task.title}}</h3>
+    <button (click)="contentHandler(task.content)">więcej</button>
+    <p [hidden]="showContent"> {{task.content}}</p>
+    <a href='{{task.url}}'>zrodlo</a>
+
   </div>
 </div>

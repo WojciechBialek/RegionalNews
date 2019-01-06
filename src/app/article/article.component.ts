@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-article',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
-  title : string = 'lorem ipsum dolores';
-  description : string = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem, dolorum ducimus, earum fugit impedit laboriosam molestiae';
+  
   constructor() { }
+  @Input()
+  tasks;
+
 
   ngOnInit() {
   }

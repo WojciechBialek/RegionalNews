@@ -1,15 +1,13 @@
 
 <div style="text-align:center">
   <h1>
-    Wiadomości Regionalne!
+    {{title}}
   </h1>
-  <app-categories></app-categories>
+  <app-categories (eventTask)="selected($event)"></app-categories>
   <app-page-size></app-page-size>
-  <ul>
-    <li *ngFor="let one of article">
-    </li>
-  </ul>
-  <app-article></app-article>
+
+      <app-article [tasks]='tasks'></app-article>
+
 </div>
 
 

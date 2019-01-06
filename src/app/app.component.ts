@@ -6,11 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'RegionalNews';
+  title = 'Wiadomości Regionalne!';
+  tasks;
+  selected(data) {
+    this.tasks = data.articles;
+    console.log(this.tasks);
+  }
+
+  constructor() {  }
 }
+
 
 export interface Article {
   title: string;
   description: string;
-  urlToImage: string;
+  content: string;
+  url: string;
+  urlToImage?: string;
 }
+
+
