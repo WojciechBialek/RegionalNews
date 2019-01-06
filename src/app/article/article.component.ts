@@ -6,6 +6,8 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent  {
+  contentHandler(){
+  }
   @Input()
   tasks;
 }

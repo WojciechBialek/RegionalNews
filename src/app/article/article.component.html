@@ -4,8 +4,8 @@
   </div>
   <div>
     <h3>{{task.title}}</h3>
-    <button (click)="contentHandler(task.content)">więcej</button>
-    <p [hidden]="showContent"> {{task.content}}</p>
+    <button (click)="contentHandler()">więcej</button>
+    <p [hidden]="true">{{task.content}}</p>
     <a href='{{task.url}}'>zrodlo</a>
 
   </div>

@@ -14,7 +14,7 @@ export class CategoriesComponent implements OnInit {
   @Output()
   eventTask = new EventEmitter();
 
-  buttonHandle(e){
+  buttonHandle(e) {
     console.log(e);
     this.httpService.getArticles(e).subscribe(articles => {
       console.log(articles);
