@@ -9,10 +9,10 @@ export class PageSizeComponent implements OnInit {
   constructor() { }
 
   @Output()
-  eventpagination = new EventEmitter();
+  paginationEvent = new EventEmitter();
 
   selectHandle(e) {
-    this.eventpagination.emit(e);
+    this.paginationEvent.emit(e);
   }
   ngOnInit() {
   }

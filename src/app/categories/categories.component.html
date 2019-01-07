@@ -1,6 +1,6 @@
 <div>
-  <button *ngFor="let categorie of categories" (click)="buttonHandle(categorie)">
-    <ng-container [ngSwitch]="categorie">
+  <button *ngFor="let category of categories" (click)="buttonHandle(category)">
+    <ng-container [ngSwitch]="category">
       <ng-container *ngSwitchCase="'business'">biznes</ng-container>
       <ng-container *ngSwitchCase="'entertainment'">rozrywka</ng-container>
       <ng-container *ngSwitchCase="'health'">zdrowie</ng-container>

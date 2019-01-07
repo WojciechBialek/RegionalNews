@@ -8,26 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Wiadomości Regionalne!';
   tasks;
-  itemsPer;
+  itemsPerPage;
   selected(data) {
     this.tasks = data.articles;
     console.log(this.tasks);
   }
   pagination(data){
-    this.itemsPer = Number(data);
-    console.log(this.itemsPer);
+    this.itemsPerPage = Number(data);
+    console.log(this.itemsPerPage);
   }
 
   constructor() {  }
 }
-
-
-export interface Article {
-  title: string;
-  description: string;
-  content: string;
-  url: string;
-  urlToImage?: string;
-}
-
-

@@ -12,13 +12,13 @@ export class CategoriesComponent implements OnInit {
   categories = ['business', 'entertainment', 'health', 'science', 'sports', 'technology'];
 
   @Output()
-  eventTask = new EventEmitter();
+  taskEvent = new EventEmitter();
 
-  buttonHandle(e) {
-    console.log(e);
-    this.httpService.getArticles(e).subscribe(articles => {
+  buttonHandle(category) {
+    console.log(category);
+    this.httpService.getArticles(category).subscribe(articles => {
       console.log(articles);
-      this.eventTask.emit(articles);
+      this.taskEvent.emit(articles);
     });
   }
 
