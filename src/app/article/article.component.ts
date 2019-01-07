@@ -12,23 +12,10 @@ export class ArticleComponent  {
   @Input()
   tasks;
 
-  articlesTest = this.tasks;
-
-
   itemsPerPageHandler(){
     return this.itemsPerPage === undefined ? 20 : this.itemsPerPage;
   }
-  contentHandler(task){
-    console.log(this.tasks)
-    console.log(this.articlesTest)
+  contentHandler(article) {
+    article.isDetailsOpen = true;
   }
-}
-
-export interface Article {
-  title: string;
-  description: string;
-  content: string;
-  url: string;
-  urlToImage?: string;
-  isDetailsOpen: boolean;
 }

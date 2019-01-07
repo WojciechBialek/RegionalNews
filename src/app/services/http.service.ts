@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {Article} from '../article/article.component';
-import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +13,7 @@ export class HttpService {
 
   private pageSize = 100;
 
-  getArticles(category): Observable {
+  getArticles(category) {
     return this.http.get(this.URL + '&category=' + category + '&PageSize=' + this.pageSize, {params: this.param});
   }
 }
