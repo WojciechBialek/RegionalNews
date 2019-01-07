@@ -7,6 +7,7 @@ import { PageSizeComponent } from './page-size/page-size.component';
 import { ArticleComponent } from './article/article.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './services/http.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpService } from './services/http.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

@@ -6,8 +6,14 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent  {
+
+  items(){
+    return this.itemsPer === undefined ? 20 : this.itemsPer;
+  }
   contentHandler(){
   }
+  @Input()
+  itemsPer;
   @Input()
   tasks;
 }

@@ -1,12 +1,15 @@
-<div class="article" *ngFor="let task of tasks">
-  <div>
-    <img src="{{task.urlToImage}}" class="article__img">
-  </div>
-  <div>
-    <h3>{{task.title}}</h3>
-    <button (click)="contentHandler()">więcej</button>
-    <p [hidden]="true">{{task.content}}</p>
-    <a href='{{task.url}}'>zrodlo</a>
+<div>
+  <div class="article" *ngFor="let task of tasks | paginate: { itemsPerPage: items(), currentPage: p }">
+    <div>
+      <img src="{{task.urlToImage}}" class="article__img">
+    </div>
+    <div>
+      <h3>{{task.title}}</h3>
+      <button (click)="contentHandler()">więcej</button>
+      <p [hidden]="true">{{task.content}}</p>
+      <a href='{{task.url}}'>zrodlo</a>
 
+    </div>
   </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

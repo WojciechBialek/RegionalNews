@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Wiadomości Regionalne!';
   tasks;
+  itemsPer;
   selected(data) {
     this.tasks = data.articles;
     console.log(this.tasks);
+  }
+  pagination(data){
+    this.itemsPer = Number(data);
+    console.log(this.itemsPer);
   }
 
   constructor() {  }
