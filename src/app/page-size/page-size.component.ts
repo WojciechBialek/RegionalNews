@@ -13,14 +13,12 @@ export class PageSizeComponent implements OnInit {
   eventAmount = new EventEmitter();
 
   selectHandle(e) {
-    console.log(e);
-    this.httpService.getArticlesAmount(e).subscribe(amount => {
-      console.log(amount);
-      this.eventAmount.emit(amount);
+
+    this.httpService.getArticles(Number(e)).subscribe(articles => {
+
+      this.eventAmount.emit(articles);
     });
   }
-
-
   ngOnInit() {
   }
 
