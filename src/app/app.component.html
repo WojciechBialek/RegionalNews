@@ -5,7 +5,6 @@
   </h1>
   <app-categories (taskEvent)="selected($event)"></app-categories>
   <app-page-size (paginationEvent)="pagination($event)"></app-page-size>
-
-      <app-article [tasks]='tasks' [itemsPerPage]="itemsPerPage"></app-article>
+  <app-article [tasks]='tasks' [itemsPerPage]="itemsPerPage"></app-article>
 
 </div>

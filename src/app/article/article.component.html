@@ -10,10 +10,7 @@
       </button>
       <p *ngIf='article.isDetailsOpen' [@loadAnimation] ="article.isDetailsOpen ? 'open' : 'closed'">{{article.content}} {{article.isDetailsOpen ? 'open' : '*'}}</p>
       <a class="btn btn-secondary btn-sm" role="button" href='{{article.url}}'>zrodlo</a>
-
     </div>
-
   </div>
   <pagination-controls (pageChange)='p = $event' *ngIf='tasks'></pagination-controls>
 </div>
-

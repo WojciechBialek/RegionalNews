@@ -15,6 +15,4 @@ export class AppComponent {
   pagination(data){
     this.itemsPerPage = Number(data);
   }
-
-  constructor() {  }
 }
