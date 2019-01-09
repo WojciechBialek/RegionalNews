@@ -1,12 +1,5 @@
-<div>
-  <button *ngFor="let category of categories" (click)="buttonHandle(category)">
-    <ng-container [ngSwitch]="category">
-      <ng-container *ngSwitchCase="'business'">biznes</ng-container>
-      <ng-container *ngSwitchCase="'entertainment'">rozrywka</ng-container>
-      <ng-container *ngSwitchCase="'health'">zdrowie</ng-container>
-      <ng-container *ngSwitchCase="'science'">nauka</ng-container>
-      <ng-container *ngSwitchCase="'sports'">sport</ng-container>
-      <ng-container *ngSwitchCase="'technology'">technologie</ng-container>
-    </ng-container>
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-info" *ngFor="let category of dictionary" (click)="buttonHandle(category.name)">
+    {{category.translate}}
   </button>
 </div>

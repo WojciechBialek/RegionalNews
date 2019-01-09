@@ -3,11 +3,13 @@
     <div>
       <img src='{{article.urlToImage}}' class='article__img'>
     </div>
-    <div>
+    <div class="article__content">
       <h3>{{article.title}}</h3>
-      <button (click)='contentHandler(article)' *ngIf='!article.isDetailsOpen'>więcej</button>
+      <button (click)='contentHandler(article)' *ngIf='!article.isDetailsOpen' type="button" class="btn btn-primary btn-sm">
+        więcej
+      </button>
       <p *ngIf='article.isDetailsOpen'>{{article.content}}</p>
-      <a href='{{article.url}}'>zrodlo</a>
+      <a class="btn btn-secondary btn-sm" role="button" href='{{article.url}}'>zrodlo</a>
 
     </div>
 

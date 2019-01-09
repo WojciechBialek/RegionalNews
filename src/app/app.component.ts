@@ -11,11 +11,9 @@ export class AppComponent {
   itemsPerPage;
   selected(data) {
     this.tasks = data.articles;
-    console.log(this.tasks);
   }
   pagination(data){
     this.itemsPerPage = Number(data);
-    console.log(this.itemsPerPage);
   }
 
   constructor() {  }

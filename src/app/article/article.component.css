@@ -1,5 +1,5 @@
 .article{
-  width: 800px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
@@ -13,5 +13,13 @@
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.article__content{
+  width: 100%;
+}
+h3{
+  padding-top: 13px;
+  font-size: 22px;
 }
 

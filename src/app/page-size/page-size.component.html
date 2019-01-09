@@ -1,11 +1,8 @@
-<div>
-  <form>
-    <label>ilość artykułów na stronie:</label>
-    <select id="select">
-      <option value="10" (click)="selectHandle($event.target.value)">10</option>
-      <option value="20" selected (click)="selectHandle($event.target.value)">20</option>
-      <option value="30" (click)="selectHandle($event.target.value)">30</option>
-      <option value="40" (click)="selectHandle($event.target.value)">40</option>
-    </select>
+<div class="container">
+  <form class="form-inline justify-content-center">
+      <label>ilość artykułów na stronie:</label>
+      <select (change)="selectHandle($event.target.value)" class="form-control">
+        <option *ngFor="let size of pagesizeValue" value="{{size}}" >{{size}}</option>
+      </select>
   </form>
 </div>

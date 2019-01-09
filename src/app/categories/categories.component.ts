@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import { HttpService } from '../services/http.service';
 
 @Component({
@@ -6,23 +6,41 @@ import { HttpService } from '../services/http.service';
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css']
 })
-export class CategoriesComponent implements OnInit {
+export class CategoriesComponent {
 
   constructor(private httpService: HttpService ) { }
-  categories = ['business', 'entertainment', 'health', 'science', 'sports', 'technology'];
-
+  dictionary = [
+    {
+      name: 'business',
+      translate: 'biznes'
+    },
+    {
+    name: 'entertainment',
+    translate: 'rozrywka'
+  },
+    {
+      name: 'health',
+      translate: 'zdrowie'
+    },
+    {
+      name: 'science',
+      translate: 'nauka'
+    },
+    {
+      name: 'sports',
+      translate: 'sport'
+    },
+    {
+      name: 'technology',
+      translate: 'technologie'
+    }
+  ];
   @Output()
   taskEvent = new EventEmitter();
 
   buttonHandle(category) {
-    console.log(category);
     this.httpService.getArticles(category).subscribe(articles => {
-      console.log(articles);
       this.taskEvent.emit(articles);
     });
   }
-
-  ngOnInit() {
-  }
-
 }
