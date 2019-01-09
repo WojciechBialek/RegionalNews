@@ -22,7 +22,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class ArticleComponent  {
-
+  p = '1';
   @Input()
   itemsPerPage;
   @Input()
