@@ -1,5 +1,5 @@
 <div>
-  <div class='article' *ngFor='let article of tasks | paginate: { itemsPerPage: itemsPerPageHandler(), currentPage: p }'>
+  <div class='article' *ngFor='let article of tasks | paginate: { itemsPerPage: itemsPerPageHandler(), currentPage: p }' [@loadAnimation]="tasks ? 'open' : '*'">
     <div>
       <img src='{{article.urlToImage}}' class='article__img'>
     </div>
@@ -8,7 +8,7 @@
       <button (click)='contentHandler(article)' *ngIf='!article.isDetailsOpen' type="button" class="btn btn-primary btn-sm">
         więcej
       </button>
-      <p *ngIf='article.isDetailsOpen'>{{article.content}}</p>
+      <p *ngIf='article.isDetailsOpen' [@loadAnimation] ="article.isDetailsOpen ? 'open' : 'closed'">{{article.content}} {{article.isDetailsOpen ? 'open' : '*'}}</p>
       <a class="btn btn-secondary btn-sm" role="button" href='{{article.url}}'>zrodlo</a>
 
     </div>
