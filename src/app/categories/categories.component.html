@@ -1,5 +1,5 @@
-<div class="btn-group" role="group">
-  <button type="button" class="btn btn-info" *ngFor="let category of dictionary" (click)="buttonHandle(category.name)">
+<div class="btn-group row" role="group">
+  <button type="button" class="btn btn-info " *ngFor="let category of dictionary" (click)="buttonHandle(category.name)">
     {{category.translate}}
   </button>
 </div>
